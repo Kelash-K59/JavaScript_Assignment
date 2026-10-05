@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 05</title>
+  </head>
+  <body>
+    <script>
+      //Q1. Add two numbers
+      var num1 = 10;
+      var num2 = 5;
+
+      var result = num1 + num2;
+
+      document.write("Addition: " + result);
+
+      //Q2. Subtraction, multiplication, division and modulus
+      var num1 = 10;
+      var num2 = 5;
+
+      var subtraction = num1 - num2;
+      var multiplication = num1 * num2;
+      var division = num1 / num2;
+      var modulus = num1 % num2;
+
+      document.write("Subtraction: " + subtraction + "<br>");
+      document.write("Multiplication: " + multiplication + "<br>");
+      document.write("Division: " + division + "<br>");
+      document.write("Modulus: " + modulus);
+
+      //Q3. Increment, addition, decrement and remainder
+      var number;
+
+      document.write("Value after variable declaration is: " + number + "<br>");
+
+      number = 5;
+
+      document.write("Initial value: " + number + "<br>");
+
+      number++;
+
+      document.write("Value after increment is: " + number + "<br>");
+
+      number = number + 7;
+
+      document.write("Value after addition is: " + number + "<br>");
+
+      number--;
+
+      document.write("Value after decrement is: " + number + "<br>");
+
+      var remainder = number % 3;
+
+      document.write("The remainder is: " + remainder);
+
+      //Q4. Movie tickets
+      var ticketPrice = 600;
+      var numberOfTickets = 5;
+
+      var totalCost = ticketPrice * numberOfTickets;
+
+      document.write(
+        "Total cost to buy " +
+          numberOfTickets +
+          " movie tickets is " +
+          totalCost +
+          " PKR",
+      );
+
+      //Q5. Multiplication table
+      var number = 5;
+
+      document.write(number + " x 1 = " + number * 1 + "<br>");
+      document.write(number + " x 2 = " + number * 2 + "<br>");
+      document.write(number + " x 3 = " + number * 3 + "<br>");
+      document.write(number + " x 4 = " + number * 4 + "<br>");
+      document.write(number + " x 5 = " + number * 5 + "<br>");
+      document.write(number + " x 6 = " + number * 6 + "<br>");
+      document.write(number + " x 7 = " + number * 7 + "<br>");
+      document.write(number + " x 8 = " + number * 8 + "<br>");
+      document.write(number + " x 9 = " + number * 9 + "<br>");
+      document.write(number + " x 10 = " + number * 10 + "<br>");
+
+      //Q6. Temperature Converter
+      // Celsius to Fahrenheit
+      var celsius = 25;
+
+      var fahrenheit = (celsius * 9) / 5 + 32;
+
+      document.write(celsius + "°C is " + fahrenheit + "°F<br>");
+
+      // Fahrenheit to Celsius
+      var fahrenheitTemp = 70;
+
+      var celsiusTemp = ((fahrenheitTemp - 32) * 5) / 9;
+
+      document.write(fahrenheitTemp + "°F is " + celsiusTemp + "°C");
+
+      //Q7. Shopping cart checkout
+      var priceItem1 = 650;
+      var priceItem2 = 1000;
+
+      var quantityItem1 = 3;
+      var quantityItem2 = 2;
+
+      var shippingCharges = 150;
+
+      var totalCost =
+        priceItem1 * quantityItem1 +
+        priceItem2 * quantityItem2 +
+        shippingCharges;
+
+      document.write("<h1>Shopping Cart</h1>");
+      document.write("Price of item 1: " + priceItem1 + "<br>");
+      document.write("Ordered quantity of item 1: " + quantityItem1 + "<br>");
+      document.write("Price of item 2: " + priceItem2 + "<br>");
+      document.write("Ordered quantity of item 2: " + quantityItem2 + "<br>");
+      document.write("Shipping charges: " + shippingCharges + "<br><br>");
+      document.write("Total cost: " + totalCost);
+
+      //Q8. Student percentage
+      var totalMarks = 500;
+      var marksObtained = 425;
+
+      var percentage = (marksObtained / totalMarks) * 100;
+
+      document.write("Total Marks: " + totalMarks + "<br>");
+      document.write("Marks Obtained: " + marksObtained + "<br>");
+      document.write("Percentage: " + percentage + "%");
+
+      //Q9. Currency conversion
+      var totalPKR = 10 * 104.8 + 25 * 28;
+
+      document.write(
+        "Total currency in Pakistani Rupees: " + totalPKR + " PKR",
+      );
+
+      //Q10. Arithmetic sequence
+      var number = 10;
+
+      var result = ((number + 5) * 10) / 2;
+
+      document.write("Result: " + result);
+
+      //Q11. Age Calculator
+      var currentYear = 2026;
+      var birthYear = 2005;
+
+      var age1 = currentYear - birthYear;
+      var age2 = age1 - 1;
+
+      document.write("They are either " + age2 + " or " + age1 + " years old");
+
+      //Q12. Geometrizer
+      var radius = 5;
+      var pi = 3.142;
+
+      var circumference = 2 * pi * radius;
+      var area = pi * radius * radius;
+
+      document.write("The circumference is " + circumference + "<br>");
+
+      document.write("The area is " + area);
+
+      //Q13. Lifetime Supply Calculator
+      var favoriteSnack = "Chocolate";
+      var currentAge = 20;
+      var maximumAge = 70;
+      var amountPerDay = 2;
+
+      var totalRequired = (maximumAge - currentAge) * 365 * amountPerDay;
+
+      document.write(
+        "You will need " +
+          totalRequired +
+          " " +
+          favoriteSnack +
+          " to last you until the ripe old age of " +
+          maximumAge,
+      );
+    </script>
+  </body>
+</html>

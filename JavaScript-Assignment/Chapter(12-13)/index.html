@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter (12-13)</title>
+  </head>
+  <body>
+    <script>
+      /* Q1. Write a program that takes a character (number or string) 
+in a variable & checks whether the given input is a 
+number, uppercase letter or lower case letter. (Hint: ASCII 
+codes:- A=65, Z=90, a=97, z=122).*/
+      var ch = prompt("Enter a character:");
+      var code = ch.charCodeAt(0);
+
+      if (code >= 48 && code <= 57) {
+        document.write(ch + " is a number");
+      } else if (code >= 65 && code <= 90) {
+        document.write(ch + " is an uppercase letter");
+      } else if (code >= 97 && code <= 122) {
+        document.write(ch + " is a lowercase letter");
+      } else {
+        document.write(ch + " is a special character");
+      }
+
+      /* Q2. Write a JavaScript program that accept two integers and
+display the larger. Also show if the two integers are equal.*/
+      var a = parseInt(prompt("Enter first integer:"));
+      var b = parseInt(prompt("Enter second integer:"));
+
+      if (a > b) {
+        document.write(a + " is larger");
+      } else if (b > a) {
+        document.write(b + " is larger");
+      } else {
+        document.write("Both integers are equal");
+      }
+
+      /* Q3. Write a program that takes input a number from user & 
+state whether the number is positive, negative or zero.*/
+      var num = Number(prompt("Enter a number:"));
+
+      if (num > 0) {
+        document.write(num + " is positive");
+      } else if (num < 0) {
+        document.write(num + " is negative");
+      } else {
+        document.write("The number is zero");
+      }
+
+      /* Q4. Write a program that takes a character (i.e. string of 
+length 1) and returns true if it is a vowel, false otherwise*/
+      function isVowel(ch) {
+        ch = ch.toLowerCase();
+        if (
+          ch === "a" ||
+          ch === "e" ||
+          ch === "i" ||
+          ch === "o" ||
+          ch === "u"
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      var c = prompt("Enter a single character:");
+      document.write(isVowel(c));
+
+      /* Q5. Write a program that
+a. Store correct password in a JS variable.
+b. Asks user to enter his/her password
+c. Validate the two passwords:
+i. Check if user has entered password. If not, then 
+give message “ Please enter your password”
+ii. Check if both passwords are same. If they are 
+same, show message “Correct! The password you 
+entered matches the original password”. Show 
+“Incorrect password” otherwise.*/
+      var correctPassword = "pakistan123";
+      var userPassword = prompt("Enter your password:");
+
+      if (userPassword === "" || userPassword === null) {
+        document.write("Please enter your password");
+      } else if (userPassword === correctPassword) {
+        document.write(
+          "Correct! The password you entered matches the original password",
+        );
+      } else {
+        document.write("Incorrect password");
+      }
+
+      /* Q6. This if/else statement does not work. Try to fix it:
+var greeting;
+var hour = 13;
+if (hour < 18) {
+greeting = "Good day";
+else
+greeting = "Good evening";
+}*/
+      var greeting;
+      var hour = 13;
+
+      if (hour < 18) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      document.write(greeting);
+
+      /*7. Write a program that takes time as input from user in 24 
+hours clock format like: 1900 = 7pm. Implement the 
+following case using if, else & else if statements*/
+      var time = parseInt(prompt("Enter time in 24 hour format (e.g. 1900):"));
+
+      if (time >= 0 && time < 1200) {
+        document.write("Good morning!");
+      } else if (time >= 1200 && time < 1700) {
+        document.write("Good afternoon!");
+      } else if (time >= 1700 && time < 2100) {
+        document.write("Good evening!");
+      } else if (time >= 2100 && time <= 2359) {
+        document.write("Good night!");
+      } else {
+        document.write("Invalid time");
+      }
+    </script>
+  </body>
+</html>

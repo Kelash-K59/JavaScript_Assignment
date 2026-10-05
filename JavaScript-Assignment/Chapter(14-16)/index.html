@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter (14,15,16)</title>
+  </head>
+  <body>
+    <script>
+      /* Q1. Declare an empty array using JS literal notation to store
+student names in future.*/
+      var students = [];
+
+      /* Q2. Declare an empty array using JS object notation to store
+student names in future.*/
+      var students = new Array();
+
+      /* Q3. Declare and initialize a strings array.*/
+      var names = ["Ali", "Sara", "Ahmed"];
+
+      /* Q4. Declare and initialize a numbers array.*/
+      var numbers = [10, 20, 30, 40];
+
+      /* Q5. Declare and initialize a boolean array.*/
+      var flags = [true, false, true];
+
+      /* Q6. Declare and initialize a mixed array.*/
+      var mixed = ["Ali", 25, true, null, 3.14];
+
+      /* Q7. Declare and Initialize an array and store available 
+education qualifications in Pakistan (e.g. SSC, HSC, BCS, 
+BS, BCOM, MS, M. Phil., PhD). Show the listed 
+qualifications in your browser like:*/
+      var qualifications = [
+        "SSC",
+        "HSC",
+        "BCS",
+        "BS",
+        "BCOM",
+        "MS",
+        "M. Phil.",
+        "PhD",
+      ];
+
+      document.write("<h2>Qualifications:</h2>");
+      for (var i = 0; i < qualifications.length; i++) {
+        document.write(i + 1 + ") " + qualifications[i] + "<br>");
+      }
+
+      /* Q8. Write a program to store 3 student names in an array.Take
+another array to store score of these three students. 
+Assume that total marks are 500 for each student, display 
+the scores & percentages of students like:*/
+      var names = ["Michael", "John", "Tony"];
+      var scores = [320, 230, 480];
+      var total = 500;
+
+      for (var i = 0; i < names.length; i++) {
+        var percentage = (scores[i] / total) * 100;
+        document.write(
+          "Score of " +
+            names[i] +
+            " is " +
+            scores[i] +
+            ". Percentage: " +
+            percentage +
+            "%<br>",
+        );
+      }
+
+      /* Q9. Write a program to store student scores in an array & 
+sort the array in ascending order using Array’s sort 
+method.*/
+      var scores = [320, 230, 480, 120];
+      document.write("Scores of Students : " + scores + "<br>");
+
+      scores.sort(function (a, b) {
+        return a - b;
+      });
+      document.write("Ordered Scores of Students : " + scores);
+
+      /* Q10. Write a program to initialize an array with city names. 
+Copy 3 array elements from cities array to selectedCities 
+array.*/
+      var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+      var selectedCities = cities.slice(2, 4);
+
+      document.write("Cities list:<br>" + cities + "<br><br>");
+      document.write("Selected cities list:<br>" + selectedCities);
+
+      /* Q11. Write a program to create a single string from the 
+below mentioned array:
+var arr = [“This ”, “ is ”, “ my ”, “ cat”];
+(Use array’s join method)*/
+      var arr = ["This ", " is ", " my ", " cat"];
+
+      document.write("Array:<br>" + arr + "<br><br>");
+      document.write("String:<br>" + arr.join(""));
+
+      /* Q12. Create a new array. Store values one by one in such a way
+that you can access the values in the order in which they 
+were stored. (FIFO-First In First Out)*/
+      var devices = [];
+      devices.push("keyboard");
+      devices.push("mouse");
+      devices.push("printer");
+      devices.push("monitor");
+
+      document.write("Devices:<br>" + devices + "<br><br>");
+
+      while (devices.length > 0) {
+        document.write("Out:<br>" + devices.shift() + "<br>");
+      }
+
+      /* Q13. Create a new array. Store values one by one in such a way
+that you can access the values in reverse order. (Last InFirst Out)*/
+      var devices = [];
+      devices.push("keyboard");
+      devices.push("mouse");
+      devices.push("printer");
+      devices.push("monitor");
+
+      document.write("Devices:<br>" + devices + "<br><br>");
+
+      while (devices.length > 0) {
+        document.write("Out:<br>" + devices.pop() + "<br>");
+      }
+
+      /* Q14. Write a program to store phone manufacturers (Apple,
+Samsung, Motorola, Nokia, Sony & Haier) in an array. 
+Display the following dropdown/select menu in your 
+browser using document.write() method:*/
+      var manufacturers = [
+        "Apple",
+        "Samsung",
+        "Motorola",
+        "Nokia",
+        "Sony",
+        "Haier",
+      ];
+
+      document.write("<select>");
+      for (var i = 0; i < manufacturers.length; i++) {
+        document.write("<option>" + manufacturers[i] + "</option>");
+      }
+      document.write("</select>");
+    </script>
+  </body>
+</html>
